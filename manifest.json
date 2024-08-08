@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "testExtension",
+    "description": "Add a custom background to Google.com",
+    "version": "1.0",
+    "icons": {
+        "16": "/images/icon16_1.png",
+        "48": "/images/icon48_1.png",
+        "128": "/images/icon128_1.png"
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "/images/icon16.png",
+            "48": "/images/icon48.png",
+            "128": "/images/icon128.png"
+        }
+    },
+    "content_scripts": [{
+        "matches": ["https://www.google.com/*"], "css": ["main.css"]
+    }]
+}
